@@ -32,7 +32,7 @@ readdirSync("./commands/").forEach(dir => {
 client.on("ready", async function () {
     console.log(`${table.toString()}\nLogin ${client.user.username}\n----------------------------`);
     client.user.setActivity(`${ops.prefix[0]} 도움 | 나는 v2`)
-    client.channels.cache.get('716912895010668605').send('해피트리봇v2가 온라인이 되었습니다!!')
+    client.channels.cache.get('716912895010668605').send(`${client.user.username}(이)가 온라인이 되었습니다!!`)
     Bot.update(client.guilds.cache.size).then(e => console.log(e.code)).catch(e => console.error(e.message))
 })
 .on("message", async function (message) {
