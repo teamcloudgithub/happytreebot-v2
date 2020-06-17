@@ -3,11 +3,11 @@ const { Client, Collection, MessageEmbed } = require('discord.js'),
     chalk = require("chalk"),
     koreanbots = require("koreanbots"),
     table = (new(require("ascii-table"))).setHeading("Command", "Status"),
-    Bot = new koreanbots.MyBot('eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTc0NDMxNjk0MzY5NTg5MiIsImlhdCI6MTU4OTc3MzQzMywiZXhwIjoxNjIxMzMxMDMzfQ.PNvx4nSp-YsRf0ys7GM4XXtkIMdjAaL9Y4zP8NG0vCRK5fFmNPjoehAFCmF-Breff2FuV7IKMtb2wtxxKIVE-yNFI1vgdBtn6xVvuRLs2xb8Q1j82TTqjbDCBIziBy3rpLWz0XOo6TWcW5rQuXPX6Bq-GgzMamuJ1p5SkClPvH4'),
+    Bot = new koreanbots.MyBot('TOKEN'),
     client = new Client(),
     ops = require('./ops');
 
-client.login("NjY5NzQ0MzE2OTQzNjk1ODky.XugyyA.ZK1OaZhRJIA1JsZStGe3UjrojPU");
+client.login("BOT_TOKEN");
 
 client.commands = new Collection();
 client.aliases = new Collection();
