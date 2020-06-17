@@ -37,7 +37,7 @@ client.on("ready", async function () {
 })
 .on("message", async function (message) {
     let cdseond = 6000
-    if (message.author.bot || message.system || !message.content.startsWith('^해피야')) return;
+    if (message.author.bot || message.system || !message.content.startsWith(BOT_PREFIX)) return;
 
     try {
         client.channels.cache.get('722308092695674891').send(new MessageEmbed().setColor('GREEN').setTitle('명령어 사용!').setDescription(`**유저:${message.author.username}\n${message.author.id}\n서버:${message.guild.name}\n${message.guild.id}\n메시지 내용:${message.content}**`).setFooter(message.author.tag, message.author.avatarURL()))
@@ -46,9 +46,9 @@ client.on("ready", async function () {
                 client.cooltime.delete(message.author.id)
             }, cdseond)
         }
-        if (message.content == `^해피야`) return message.channel.send('왜');
+        if (message.content == prefix) return message.channel.send('왜');
 
-        const args = message.content.slice(4).trim().split(/ +/g),
+        const args = message.content.slice(BOT_PREFIX.length).trim().split(/ +/g),
 		    cmd = args.shift().toLowerCase(),
             command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
         
